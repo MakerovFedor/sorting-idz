@@ -26,7 +26,6 @@ FULL_SIZES = {
     "Insertion Sort": [100, 300, 600, 1000, 2000, 4000, 8000, 10000],
     "Quick Sort (Hoare)": [1000, 5000, 10000, 50000, 100000, 300000, 500000, 1000000],
 }
-# Небольшой режим для первого запуска и освоения ноутбука, не финальная сдача.
 DEMO_SIZES = {
     "Stupid Sort": [20, 40, 60, 80, 100],
     "Insertion Sort": [100, 200, 400, 800, 1200],
@@ -85,7 +84,7 @@ def benchmark(
         raise ValueError("Для оценки разброса нужно как минимум 2 повтора")
     chosen = list(names) if names is not None else list(SORTS)
     kinds = list(distributions) if distributions is not None else list(DISTRIBUTIONS)
-    grid = sizes if sizes is not None else FULL_SIZES
+    grid = sizes if sizes is not None else FULL_SIZES 
     raw: list[dict] = []
     summary: list[dict] = []
 
